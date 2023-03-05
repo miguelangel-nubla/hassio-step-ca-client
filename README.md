@@ -73,7 +73,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[addon-example]: [https://github.com/hassio-addons/addon-example]
+[addon-example]: https://github.com/hassio-addons/addon-example
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
@@ -88,9 +88,9 @@ SOFTWARE.
 [license-shield]: https://img.shields.io/github/license/miguelangel-nubla/hassio-step-ca-client.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
 [miguelangel-nubla]: https://github.com/miguelangel-nubla
-[pki-guide]: [https://smallstep.com/blog/build-a-tiny-ca-with-raspberry-pi-yubikey/]
-[pki-guide-yubikey]: [https://smallstep.com/blog/build-a-tiny-ca-with-raspberry-pi-yubikey/]
+[pki-guide]: https://smallstep.com/blog/build-a-tiny-ca-with-raspberry-pi-yubikey/
+[pki-guide-yubikey]: https://smallstep.com/blog/build-a-tiny-ca-with-raspberry-pi-yubikey/
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
 [releases-shield]: https://img.shields.io/github/release/miguelangel-nubla/hassio-step-ca-client.svg
 [releases]: https://github.com/miguelangel-nubla/hassio-step-ca-client/releases
-[step-ca]: [https://smallstep.com/docs/step-ca/installation]
+[step-ca]: https://smallstep.com/docs/step-ca/installation
