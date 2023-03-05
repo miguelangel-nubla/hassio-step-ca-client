@@ -4,9 +4,6 @@ When contributing to this repository, please first discuss the change you wish
 to make via issue, email, or any other method with the owners of this repository
 before making a change.
 
-Please note we have a code of conduct, please follow it in all your interactions
-with the project.
-
 ## Issues and feature requests
 
 You've found a bug in the source code, a mistake in the documentation or maybe
@@ -25,5 +22,5 @@ Even better: You could submit a pull request with a fix / new feature!
    developers, or if you do not have permission to do that, you may request
    the second reviewer to merge it for you.
 
-[github]: https://github.com/hassio-addons/addon-example/issues
-[prs]: https://github.com/hassio-addons/addon-example/pulls
+[github]: https://github.com/miguelangel-nubla/hassio-step-ca-client/issues
+[prs]: https://github.com/miguelangel-nubla/hassio-step-ca-client/pulls

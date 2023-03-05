@@ -1,0 +1,46 @@
+---
+name: step-ca-client
+version: dev
+slug: step-ca-client
+description: SSL/TLS certificates from your own PKI
+url: https://github.com/miguelangel-nubla/hassio-step-ca-client
+#codenotary: codenotary@frenck.dev
+init: false
+hassio_api: true
+hassio_role: manager
+map:
+  - ssl:rw
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  ca_url: https://tinyca.internal
+  root_ca_fingerprint: ""
+  token: ""
+  subjects:
+    - homeassistant.local
+  cafile: ca.pem
+  keyfile: privkey.pem
+  certfile: fullchain.pem
+  restart_ha: true
+  restart_addons:
+    - core_mosquitto
+  log_level: info
+  key_type: RSA
+schema:
+  ca_url: url
+  root_ca_fingerprint: str
+  token: password
+  subjects:
+    - str
+  cafile: str
+  keyfile: str
+  certfile: str
+  restart_ha: bool
+  restart_addons:
+    - str
+  log_level: list(trace|debug|info|notice|warning|error|fatal)
+  key_type: list(EC|OKP|RSA)

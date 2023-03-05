@@ -1,0 +1,20 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant Add-on: step-ca-client
+# Runs renewal-daemon script
+# ==============================================================================
+set -e
+
+sleep 2 # give time to logging to flush and not be mixed
+
+
+bashio::log.info "Starting step-ca-client"
+/usr/bin/root_ca.sh
+
+if ! $(step certificate verify "/ssl/$(bashio::config 'certfile')" -roots=/root/.step/certs/root_ca.crt); then
+    /usr/bin/create-with-token.sh
+fi
+
+bashio::log.info "Starting renewal daemon..."
+exec /usr/bin/renewal-daemon.sh

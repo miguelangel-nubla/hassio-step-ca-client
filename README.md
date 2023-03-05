@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: Example
+# Home Assistant Add-on: step-ca-client
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -14,48 +14,19 @@
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-[![Discord][discord-shield]][discord]
-[![Community Forum][forum-shield]][forum]
-
-[![Sponsor Frenck via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
-
-[![Support Frenck on Patreon][patreon-shield]][patreon]
-
-Example add-on by Community Home Assistant add-ons.
-
 ## About
 
-This is an example add-on for Home Assistant. When started, it displays a
-random quote every 5 seconds.
+This is an [step-ca][step-ca] client add-on for Home Assistant.
 
-It shows off several features and structures like:
+It manages the automatic creation and renewal of x509 certificates from a
+remote step-ca PKI server, in order to enable TLS/SSL connections in
+Home Assistant and the installed addons.
 
-- Full blown GitHub repository.
-- General Dockerfile structure and setup.
-- The use of the `config.yaml` and `build.yaml` files.
-- General structure on how to use S6 overlay with services.
-- Basic usage of Bashio.
-- Continuous integration and deployment using GitHub Actions.
-- Deployment to the GitHub Container registry.
-- Small use of the Bash function library in our base images.
-- The use of Docker label schema.
+Here is a [quick-start guide][pki-guide] on how to setup step-ca.
+
+With a Yubikey you can even set up setup a [hardware based, local PKI][pki-guide-yubikey].
 
 [:books: Read the full add-on documentation][docs]
-
-## Support
-
-Got questions?
-
-You have several options to get them answered:
-
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
-  support and feature requests.
-- The [Home Assistant Discord chat server][discord-ha] for general Home
-  Assistant discussions and questions.
-- The Home Assistant [Community Forum][forum].
-- Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
-
-You could also [open an issue here][issue] GitHub.
 
 ## Contributing
 
@@ -69,21 +40,17 @@ Thank you for being involved! :heart_eyes:
 
 ## Authors & contributors
 
-The original setup of this repository is by [Franck Nijhof][frenck].
+Addon created by [Miguel Angel Nubla][miguelangel-nubla] based on the
+[addon-example][addon-example] repository by [Franck Nijhof][frenck].
 
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
 
-## We have got some Home Assistant add-ons for you
-
-Want some more functionality to your Home Assistant instance?
-
-We have created multiple add-ons for Home Assistant. For a full list, check out
-our [GitHub Repository][repository].
-
 ## License
 
 MIT License
+
+Copyright (c) 2023 Miguel Angel Nubla
 
 Copyright (c) 2017-2023 Franck Nijhof
 
@@ -106,31 +73,24 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
+[addon-example]: [https://github.com/hassio-addons/addon-example]
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-example.svg
-[commits]: https://github.com/hassio-addons/addon-example/commits/main
-[contributors]: https://github.com/hassio-addons/addon-example/graphs/contributors
-[discord-ha]: https://discord.gg/c5DvZ4e
-[discord-shield]: https://img.shields.io/discord/478094546522079232.svg
-[discord]: https://discord.me/hassioaddons
-[docs]: https://github.com/hassio-addons/addon-example/blob/main/example/DOCS.md
-[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/t/repository-community-hass-io-add-ons/24705?u=frenck
+[commits-shield]: https://img.shields.io/github/commit-activity/y/miguelangel-nubla/hassio-step-ca-client.svg
+[commits]: https://github.com/miguelangel-nubla/hassio-step-ca-client/commits/main
+[contributors]: https://github.com/miguelangel-nubla/hassio-step-ca-client/graphs/contributors
+[docs]: https://github.com/miguelangel-nubla/hassio-step-ca-client/blob/main/step-ca-client/DOCS.md
 [frenck]: https://github.com/frenck
-[github-actions-shield]: https://github.com/hassio-addons/addon-example/workflows/CI/badge.svg
-[github-actions]: https://github.com/hassio-addons/addon-example/actions
-[github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
-[github-sponsors]: https://github.com/sponsors/frenck
+[github-actions-shield]: https://github.com/miguelangel-nubla/hassio-step-ca-client/workflows/CI/badge.svg
+[github-actions]: https://github.com/miguelangel-nubla/hassio-step-ca-client/actions
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
-[issue]: https://github.com/hassio-addons/addon-example/issues
-[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-example.svg
+[license-shield]: https://img.shields.io/github/license/miguelangel-nubla/hassio-step-ca-client.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
-[patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
-[patreon]: https://www.patreon.com/frenck
+[miguelangel-nubla]: https://github.com/miguelangel-nubla
+[pki-guide]: [https://smallstep.com/blog/build-a-tiny-ca-with-raspberry-pi-yubikey/]
+[pki-guide-yubikey]: [https://smallstep.com/blog/build-a-tiny-ca-with-raspberry-pi-yubikey/]
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
-[reddit]: https://reddit.com/r/homeassistant
-[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-example.svg
-[releases]: https://github.com/hassio-addons/addon-example/releases
-[repository]: https://github.com/hassio-addons/repository
+[releases-shield]: https://img.shields.io/github/release/miguelangel-nubla/hassio-step-ca-client.svg
+[releases]: https://github.com/miguelangel-nubla/hassio-step-ca-client/releases
+[step-ca]: [https://smallstep.com/docs/step-ca/installation]

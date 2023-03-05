@@ -1,5 +1,7 @@
 # MIT License
 
+Copyright (c) 2023 Miguel Angel Nubla
+
 Copyright (c) 2017-2023 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

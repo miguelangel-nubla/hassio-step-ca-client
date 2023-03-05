@@ -7,8 +7,7 @@ COPY rootfs /
 
 # Setup base
 RUN apk add --no-cache \
-    coreutils=9.1-r0 \
-    wget=1.21.3-r2
+    step-cli=0.22.0-r5
 
 # Build arguments
 ARG BUILD_ARCH
@@ -26,13 +25,11 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Franck Nijhof <frenck@addons.community>" \
+    maintainer="Miguel Angel Nubla <miguelangel.nubla@gmail.com>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
-    org.opencontainers.image.authors="Franck Nijhof <frenck@addons.community>" \
+    org.opencontainers.image.authors="Miguel Angel Nubla <miguelangel.nubla@gmail.com>" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://addons.community" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
