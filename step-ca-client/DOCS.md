@@ -205,16 +205,16 @@ SOFTWARE.
 
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
 [addon-config]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_example&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
-[addon-example]: [https://github.com/hassio-addons/addon-example]
+[addon-example]: https://github.com/hassio-addons/addon-example
 [addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_example&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
 [contributors]: https://github.com/miguelangel-nubla/hassio-step-ca-client/graphs/contributors
-[docs-step-ca-certificate-kty]: [https://smallstep.com/docs/step-cli/reference/ca/certificate#:~:text=token%20generating%20key.-,%2D%2Dkty%3D,-kty]
+[docs-step-ca-certificate-kty]: https://smallstep.com/docs/step-cli/reference/ca/certificate#:~:text=token%20generating%20key.-,%2D%2Dkty%3D,-kty
 [frenck]: https://github.com/frenck
 [miguelangel-nubla]: https://github.com/miguelangel-nubla
-[pki-guide]: [https://smallstep.com/docs/step-ca/getting-started]
-[pki-guide-yubikey]: [https://smallstep.com/blog/build-a-tiny-ca-with-raspberry-pi-yubikey/]
+[pki-guide]: https://smallstep.com/docs/step-ca/getting-started
+[pki-guide-yubikey]: https://smallstep.com/blog/build-a-tiny-ca-with-raspberry-pi-yubikey/
 [releases]: https://github.com/miguelangel-nubla/hassio-step-ca-client/releases
 [semver]: http://semver.org/spec/v2.0.0.html
-[step-ca]: [https://smallstep.com/docs/step-ca/installation]
-[tasmota-mqtt-over-tls]: [https://tasmota.github.io/docs/TLS/]
-[passive-revocation]: [https://smallstep.com/blog/passive-revocation/]
+[step-ca]: https://smallstep.com/docs/step-ca/installation
+[tasmota-mqtt-over-tls]: https://tasmota.github.io/docs/TLS/
+[passive-revocation]: https://smallstep.com/blog/passive-revocation/
