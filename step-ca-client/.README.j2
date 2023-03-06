@@ -1,3 +1,42 @@
+{% if channel == "edge" %}
+## WARNING! THIS IS AN EDGE VERSION!
+
+This Home Assistant Add-ons repository contains edge builds of add-ons.
+Edge builds add-ons are based upon the latest development version.
+
+- They may not work at all.
+- They might stop working at any time.
+- They could have a negative impact on your system.
+
+This repository was created for:
+
+- Anybody willing to test.
+- Anybody interested in trying out upcoming add-ons or add-on features.
+- Developers.
+
+If you are more interested in stable releases of my add-ons:
+
+<{{ repo | regex_replace('-' ~ channel ~ '$', '') }}>
+
+{% endif %}
+{% if channel == "beta" %}
+## WARNING! THIS IS A BETA VERSION!
+
+This Home Assistant Add-ons repository contains beta releases of add-ons.
+
+- They might stop working at any time.
+- They could have a negative impact on your system.
+
+This repository was created for:
+
+- Anybody willing to test.
+- Anybody interested in trying out upcoming add-ons or add-on features.
+
+If you are more interested in stable releases of my add-ons:
+
+<{{ repo | regex_replace('-' ~ channel ~ '$', '') }}>
+
+{% endif %}
 # Home Assistant Add-on: step-ca-client
 
 [![GitHub Release][releases-shield]][releases]
@@ -95,9 +134,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[addon-add]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_example&repository_url=https%3A%2F%2Fgithub.com%2Fmiguelangel-nubla%2Fhassio-repository
+[addon-add]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=133adb15_step-ca-client&repository_url={{ repo | urlencode |replace("/", "%2F") }}
 [addon-add-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
-[addon-add-repo]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fmiguelangel-nubla%2Fhassio-repository
+[addon-add-repo]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url={{ repo | urlencode |replace("/", "%2F") }}
 [addon-add-repo-badge]: https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg
 [addon-example]: https://github.com/hassio-addons/addon-example
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
