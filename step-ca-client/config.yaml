@@ -3,7 +3,7 @@ name: step-ca-client
 version: dev
 slug: step-ca-client
 description: SSL/TLS certificates from your own PKI
-url: https://github.com/miguelangel-nubla/hassio-step-ca-client
+url: https://github.com/miguelangel-nubla/step-ca-client
 # codenotary: codenotary@frenck.dev
 init: false
 hassio_api: true
