@@ -120,4 +120,3 @@ SOFTWARE.
 [releases-shield]: https://img.shields.io/github/release/miguelangel-nubla/hassio-step-ca-client.svg
 [releases]: https://github.com/miguelangel-nubla/hassio-step-ca-client/releases
 [step-ca]: https://smallstep.com/docs/step-ca/installation
-
