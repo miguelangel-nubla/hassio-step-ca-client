@@ -1,8 +1,8 @@
 # MIT License
 
-Copyright (c) 2023 Miguel Angel Nubla
+Copyright (c) 2023 Miguel Angel Nubla <miguelangel.nubla@gmail.com>
 
-Copyright (c) 2017-2023 Franck Nijhof
+Copyright (c) 2017-2023 Franck Nijhof <frenck@addons.community>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
