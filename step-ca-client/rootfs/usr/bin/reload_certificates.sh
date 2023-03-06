@@ -12,7 +12,11 @@
 # ==============================================================================
 set -e
 
-bashio::log.info "Services needs to be restarted so new certificates are loaded"
+bashio::log.warning "Services needs to be restarted so new certificates are loaded"
+bashio::log.info "Restarting will be delayed 5m to avoid losing connectivity on add-on start"
+bashio::log.info "If you want to force it, you can always restart this add-on and do it manually"
+bashio::log.info "The add-on will not try to restart again until a new renewal"
+sleep 300
 
 ADDONS="$(bashio::config 'restart_addons')"
 if [ -n "${ADDONS}" ]; then
@@ -26,8 +30,7 @@ fi
 
 RESTART_HA="$(bashio::config 'restart_ha')"
 if [ "${RESTART_HA}" ]; then
-    bashio::log.warning "Home Assistant restarting in 5m, hang tight!"
-    sleep 300
-    (bashio::core.restart && bashio::log.info "Home Assistant restarted") \
+    bashio::log.warning "Restarting Home Assistant core..."
+    (bashio::core.restart && bashio::log.info "Home Assistant core restarted") \
     || bashio::log.error "Failed to restart Home Assistant core"
 fi

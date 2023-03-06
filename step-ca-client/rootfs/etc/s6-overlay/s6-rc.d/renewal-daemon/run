@@ -13,7 +13,7 @@ bashio::log.info "Starting step-ca-client"
 /usr/bin/root_ca.sh
 
 if ! $(step certificate verify "/ssl/$(bashio::config 'certfile')" -roots=/root/.step/certs/root_ca.crt); then
-    /usr/bin/create-with-token.sh
+    /usr/bin/create_with_token.sh
 fi
 
 bashio::log.info "Starting renewal daemon..."
