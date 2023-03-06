@@ -25,7 +25,7 @@ fi
 
 
 RESTART_HA="$(bashio::config 'restart_ha')"
-if [ ${RESTART_HA} ]; then
+if [ "${RESTART_HA}" ]; then
     bashio::log.warning "Home Assistant restarting in 5m, hang tight!"
     sleep 300
     (bashio::core.restart && bashio::log.info "Home Assistant restarted") \

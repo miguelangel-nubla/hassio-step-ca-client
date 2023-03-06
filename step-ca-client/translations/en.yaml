@@ -2,37 +2,38 @@
 configuration:
   ca_url:
     name: step-ca Server URL
-    description: |
+    description: >-
       URL of the targeted Step Certificate Authority.
   root_ca_fingerprint:
     name: step-ca Root CA fingerprint
-    description: |
+    description: >-
       Fingerprint of the root certificate.
   token:
     name: step-ca One-time Token
-    description: |
+    description: >-
       Generate a token with `step ca token`.
   subjects:
     name: Subjective Alternative Names (SANs) to include in the certificate request
-    description: |
-      Use YAML configuration mode. Add domain names or IP Address as Subjective Alternative Names (SANs) to the certificate.
+    description: >-
+      Use YAML configuration mode. Add domain names or IP Address as
+      Subjective Alternative Names (SANs) to the certificate.
   cafile:
     name: Root CA cert filename
-    description: |
+    description: >-
       Path to where the root CA certificates will be stored, relative to /ssl/.
   keyfile:
     name: Private key filename
-    description: |
+    description: >-
       Path to where the private key file will be created, relative to /ssl/.
   certfile:
     name: Certificate filename
-    description: |
+    description: >-
       Path to where the certificate file will be created, relative to /ssl/.
   restart_ha:
     name: Restart Home Assistant core on certificate renewal
   restart_addons:
     name: Addons to restart on certificate renewal
-    description: |
+    description: >-
       Use YAML configuration mode. List of addons that will be restarted when a certificate is renewed.
   log_level:
     name: Log level

@@ -69,7 +69,7 @@ miguelangel.nubla@gmail.com (not for support!)
 
 **Encrypt messages with:**
 
-``` bash
+```bash
 cat original-message.txt | age -r age1yubikey1qdlxeulqvc227jqdz48p02l2slcnk6uv9sxh38yy3ca8sfrw5luezy0carj -o encrypted-message.txt.age
 ```
 

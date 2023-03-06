@@ -37,7 +37,7 @@ a new one-time token.
 
 The certificate lifetime is dictated when creating the token. It will use the
 default provisioner lifetime. You can change it with `step ca provisioner update <provisioner-name> --x509-default-dur=<duration>`
-*before* generating the token, but keep in mind [the design decisions of step-ca][passive-revocation].
+_before_ generating the token, but keep in mind [the design decisions of step-ca][passive-revocation].
 
 Example add-on configuration:
 
@@ -46,8 +46,8 @@ ca_url: https://tinyca.internal
 root_ca_fingerprint: "d9d0978692f1c7cc791f5c343ce98771900721405e834cd27b9502cc719f5097"
 token: "692f1c7cc791f5c343ce987d9d0978692f1c7cc791f5c343ce98692f1c7cc791f5c343ce987"
 subjects:
- - homeassistant.local
- - mqtt.local
+  - homeassistant.local
+  - mqtt.local
 keyfile: privkey.pem
 certfile: fullchain.pem
 key_type: RSA
@@ -82,7 +82,7 @@ certificate.
 Effectively the address you use to access the services you want
 to use SSL/TLS with. Some examples:
 
-- For `https://homeassistant.local:8123`  use `homeassistant.local`
+- For `https://homeassistant.local:8123` use `homeassistant.local`
 - For `mqtts://my-mqtt-server.internal` use `my-mqtt-server.internal`,
 - For `https://mydomainname.com/hass/` use `mydomainname.com`
 
@@ -91,6 +91,7 @@ one of them when creating the token, including the one you specify as the "princ
 subject. Else some certificate validators will not accept it.
 
 In short, use either:
+
 - `step ca token homeassistant.local` for:
   - `homeassistant.local`
 - or `step ca token --san=mqtt.local --san=homeassistant.local homeassistant.local` for:
