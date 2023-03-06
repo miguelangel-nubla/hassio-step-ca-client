@@ -39,14 +39,33 @@ profile step-ca-client flags=(attach_disconnected,mediate_deleted) {
     # Access to options.json and other files within your addon
     /data/** rw,
 
+    # step data directory
+    /root/.step/ rw,
+    /root/.step/** rw,
+
     # Access to mapped volumes specified in config.json
     /ssl/** rw,
 
     # Access required for service functionality
-    /usr/bin/step r,
+    /usr/bin/step mr,
     /bin/bash rix,
     /bin/echo ix,
     /etc/passwd r,
     /dev/tty rw,
+
+    # Allow read cpuset
+    /proc/*/cpuset r,
+
+    # Access to the helper scripts
+    /usr/bin/create_with_token.sh ix,
+    /usr/bin/reload_certificates.sh ix,
+    /usr/bin/renewal-daemon.sh ix,
+    /usr/bin/root_ca.sh ix,
+
+    # Access network
+    /sys/devices/virtual/dmi/id/product_uuid r,
+    /etc/resolv.conf r,
+    /etc/nsswitch.conf r,
+    /etc/hosts r,
   }
 }
