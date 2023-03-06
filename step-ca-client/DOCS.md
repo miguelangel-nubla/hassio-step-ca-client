@@ -15,14 +15,22 @@ With a Yubikey, you can even set up set up a [hardware-based, local PKI][pki-gui
 The installation of this add-on is pretty straightforward and not different
 compared to installing any other Home Assistant add-on.
 
-1. Click the Home Assistant My button below to open the add-on on your Home
+1. First you will need to add the repository to your add-on store with the
+   following button:
+
+   [![Add the add-on repository to your Home Assistant instance.][addon-add-repo-badge]][addon-add-repo]
+
+2. Click on add to complete adding the repository.
+
+3. Click the Home Assistant My button below to open the add-on on your Home
    Assistant instance.
 
-   [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
+   [![Open this add-on in your Home Assistant instance.][addon-add-badge]][addon-add]
 
-1. Click the "Install" button to install the add-on.
-1. Start the "step-ca-client" add-on.
-1. Check the logs of the "step-ca-client" add-on to see it in action.
+4. Click the "Install" button to install the add-on.
+5. Configure the add-on in the configuration tab.
+6. Start the "step-ca-client" add-on.
+7. Check the logs of the "step-ca-client" add-on to see it in action.
 
 ## Configuration
 
@@ -204,10 +212,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
-[addon-config]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_example&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
+[addon-add]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_example&repository_url=https%3A%2F%2Fgithub.com%2Fmiguelangel-nubla%2Fhassio-repository
+[addon-add-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
+[addon-add-repo]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fmiguelangel-nubla%2Fhassio-repository
+[addon-add-repo-badge]: https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg
+[addon-config]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_example&repository_url=https%3A%2F%2Fgithub.com%2Fmiguelangel-nubla%2Fhassio-repository
 [addon-example]: https://github.com/hassio-addons/addon-example
-[addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_example&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
 [contributors]: https://github.com/miguelangel-nubla/hassio-step-ca-client/graphs/contributors
 [docs-step-ca-certificate-kty]: https://smallstep.com/docs/step-cli/reference/ca/certificate#:~:text=token%20generating%20key.-,%2D%2Dkty%3D,-kty
 [frenck]: https://github.com/frenck
