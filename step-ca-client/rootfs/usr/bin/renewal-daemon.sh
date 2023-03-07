@@ -9,5 +9,5 @@
 set -e
 
 step ca renew --daemon -f \
---exec="/usr/bin/reload_certificates.sh" \
+--exec="/usr/bin/reload-certificates.sh" \
 "/ssl/$(bashio::config 'certfile')" "/ssl/$(bashio::config 'keyfile')"
