@@ -57,10 +57,10 @@ profile step-ca-client flags=(attach_disconnected,mediate_deleted) {
     /proc/*/cpuset r,
 
     # Access to the helper scripts
-    /usr/bin/create_with_token.sh ix,
-    /usr/bin/reload_certificates.sh ix,
+    /usr/bin/create-with-token.sh ix,
+    /usr/bin/reload-certificates.sh ix,
     /usr/bin/renewal-daemon.sh ix,
-    /usr/bin/root_ca.sh ix,
+    /usr/bin/root-ca.sh ix,
 
     # Access network
     /sys/devices/virtual/dmi/id/product_uuid r,

@@ -14,4 +14,4 @@ step ca certificate --kty=RSA -f \
 --token="$(bashio::config 'token')" \
 "$(bashio::config 'subjects' | head -1)" "/ssl/$(bashio::config 'certfile')" "/ssl/$(bashio::config 'keyfile')"
 
-/usr/bin/reload_certificates.sh
+/usr/bin/reload-certificates.sh
