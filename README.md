@@ -16,7 +16,7 @@
 
 ## About
 
-This is an [step-ca][step-ca] client add-on for Home Assistant.
+This is a [step-ca][step-ca] client add-on for Home Assistant.
 
 It manages the automatic creation and renewal of x509 certificates from a
 remote step-ca PKI server, in order to enable TLS/SSL connections in
