@@ -8,6 +8,15 @@
 # ==============================================================================
 set -e
 
-step ca renew --daemon -f \
---exec="/usr/bin/reload-certificates.sh" \
-"/ssl/$(bashio::config 'certfile')" "/ssl/$(bashio::config 'keyfile')"
+source /usr/bin/helpers.sh
+set_debug
+
+CERTFILE="/ssl/$(bashio::config 'certfile')"
+KEYFILE="/ssl/$(bashio::config 'keyfile')"
+#running following in subshell hides the command output until complete
+if [[ ${STEPDEBUG} -eq 1 ]];then set -x; fi;
+step ca renew \
+    -f \
+    --daemon \
+    --exec="/usr/bin/reload-certificates.sh" \
+    "${CERTFILE}" "${KEYFILE}"

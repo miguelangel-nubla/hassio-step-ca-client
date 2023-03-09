@@ -57,6 +57,7 @@ profile step-ca-client flags=(attach_disconnected,mediate_deleted) {
     /proc/*/cpuset r,
 
     # Access to the helper scripts
+    /usr/bin/helpers.sh ix,
     /usr/bin/create-with-token.sh ix,
     /usr/bin/reload-certificates.sh ix,
     /usr/bin/renewal-daemon.sh ix,
