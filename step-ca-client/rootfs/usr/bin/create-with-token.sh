@@ -8,6 +8,7 @@
 # ==============================================================================
 set -e
 
+# shellcheck source=/dev/null
 source /usr/bin/helpers.sh
 set_debug
 
