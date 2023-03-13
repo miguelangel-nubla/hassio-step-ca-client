@@ -12,7 +12,7 @@
 # ==============================================================================
 set -e
 
-bashio::log.notice "Services needs to be restarted so new certificates are loaded"
+bashio::log.notice "Services need to be restarted so new certificates are loaded"
 bashio::log.info "Restarting will be delayed 5m to avoid losing connectivity on add-on start"
 bashio::log.info "If you want to force it, you can always restart this add-on and do it manually"
 bashio::log.info "The add-on will not try to restart again until a new renewal is completed"
