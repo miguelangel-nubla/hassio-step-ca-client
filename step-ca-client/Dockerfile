@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.1.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:stable
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -7,7 +7,7 @@ COPY rootfs /
 
 # Setup base
 RUN apk add --no-cache \
-    step-cli=0.22.0-r5
+    step-cli=0.28.5-r0
 
 # Build arguments
 ARG BUILD_ARCH
