@@ -7,7 +7,7 @@ COPY rootfs /
 
 # Setup base
 RUN apk add --no-cache \
-    step-cli=0.28.5-r0
+    step-cli=0.29.0-r0
 
 # Build arguments
 ARG BUILD_ARCH
