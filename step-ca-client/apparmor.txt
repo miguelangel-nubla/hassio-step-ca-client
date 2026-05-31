@@ -7,6 +7,8 @@ profile step-ca-client flags=(attach_disconnected,mediate_deleted) {
   file,
   signal (send) set=(kill,term,int,hup,cont),
 
+  network,
+
   # S6-Overlay
   /init ix,
   /bin/** ix,
@@ -32,6 +34,8 @@ profile step-ca-client flags=(attach_disconnected,mediate_deleted) {
 
   profile step flags=(attach_disconnected,mediate_deleted) {
     #include <abstractions/base>
+
+    network,
 
     # Receive signals from S6-Overlay
     signal (receive) peer=*_step-ca-client,
